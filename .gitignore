@@ -1,0 +1,10 @@
+*.o
+*.a
+*.so
+*.exe
+*.out
+build/
+out/
+.vs*/
+.idea*/
+
