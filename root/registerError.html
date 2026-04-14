@@ -1,22 +1,91 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Sign up</title>
-    </head>
-    <body>
-<br/>
-<br/>
-    <div align="center"><font size="5"> <strong>注册</strong></font></div>
-    <br/>
-        <div class="login">
-                <form action="3CGISQL.cgi" method="post">
-                        <div align="center"><input type="text" name="user" placeholder="用户名" required="required"></div><br/>
-                        <div align="center"><input type="password" name="password" placeholder="用户密码" required="required"></div><br/>
-                        <div align="center"><button type="submit">注册</button></div>
-                </form>
-		<div  align="center">提示：该用户名被注册.</div>
-        </div>
-    </body>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e0e0e0;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            padding: 48px 36px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 26px;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+        .hint {
+            color: #ff6b6b;
+            font-size: 14px;
+            margin-bottom: 24px;
+            background: rgba(255, 107, 107, 0.1);
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 107, 107, 0.2);
+        }
+        .input-field {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            color: #ffffff;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .input-field::placeholder { color: rgba(255, 255, 255, 0.4); }
+        .input-field:focus { border-color: #667eea; }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px 0;
+            margin-top: 8px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>注册</h1>
+        <div class="hint">提示：该用户名已被注册</div>
+        <form action="3CGISQL.cgi" method="post">
+            <input class="input-field" type="text" name="user" placeholder="用户名" required="required">
+            <input class="input-field" type="password" name="password" placeholder="用户密码" required="required">
+            <button class="btn" type="submit">注册</button>
+        </form>
+    </div>
+</body>
 </html>
-

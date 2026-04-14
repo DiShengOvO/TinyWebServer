@@ -1,15 +1,53 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>awsl</title>
-    </head>
-    <body><br/>
-<br/>
-<div align="center"><font size="5"> <strong>你居然想看图，不想关注我</strong></font></div>
-<br/>
-<!--<div  align="center">a w s l</div>-->
-<br/>
-<br/>
-<div align="center"><img src="./xxx.jpg" title="awsl"/></div>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e0e0e0;
+            padding: 40px 20px;
+        }
+        .media-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            padding: 24px;
+            max-width: 90%;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            display: block;
+        }
+        .back-link {
+            margin-top: 24px;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover { color: #ffffff; }
+    </style>
+</head>
+<body>
+    <div class="media-card">
+        <img src="./xxx.jpg" alt="picture"/>
+        <a class="back-link" href="welcome.html">← 返回主页</a>
+    </div>
+</body>
 </html>
