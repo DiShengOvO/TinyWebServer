@@ -7,5 +7,6 @@ build/
 out/
 .vs*/
 .idea*/
-*ServerLog
+*ServerLog*
 DesignDocument.md
+
